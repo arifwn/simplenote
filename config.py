@@ -5,7 +5,7 @@ Base configuration module for SimpleNote.
 import base64
 import json
 
-API_ENDPOINT_URL = 'https://sandbox.evernote.com/'
+evernote_host = 'https://sandbox.evernote.com/'
 
 def get_api_key():
     '''
@@ -13,5 +13,5 @@ def get_api_key():
     or later, so there is no use to encrypt them. but I still don't want my key
     getting picked up by search engine easily ;)
     '''
-    obfuscated_data = 'eyJFVkVSTk9URV9BUElfS0VZIjogIjJmYTYwZDQ5MDEyODQ0YzYiLCAiRVZFUk5PVEVfQ09OU1VN\nRVIiOiAiYXJpZnduIn0=\n'
+    obfuscated_data = 'eyJFVkVSTk9URV9DT05TVU1FUl9LRVkiOiAiYXJpZnduIiwgIkVWRVJOT1RFX0NPTlNVTUVSX1NF\nQ1JFVCI6ICIyZmE2MGQ0OTAxMjg0NGM2In0=\n'
     return json.loads(base64.decodestring(obfuscated_data))
