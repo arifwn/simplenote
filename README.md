@@ -1,0 +1,4 @@
+SimpleNote
+==========
+
+Simple Evernote client.
